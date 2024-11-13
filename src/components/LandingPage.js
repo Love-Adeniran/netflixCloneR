@@ -22,38 +22,37 @@ const landingPage = () => {
                         </div>
                     </div>
                 </header>
-                <div className='border-t-2 border-l relative banner  rounded-3xl my-4 '>
-                    <img className='backdrop-blur-sm image rounded-3xl' src="https://assets.nflxext.com/ffe/siteui/vlv3/61b94313-a53b-4a73-b973-7632aafc9d8f/web_tall_panel/NG-en-20241104-TRIFECTA-perspective_92939d2b-8888-4ee5-9f91-baae83156198_large.jpg" alt="" />
-                <div className="w-full absolute top-44 left-0 overlay bg-gradient-to-b from-transparent to-current   md:px-52  "
+                <div className='  banner h-50 relative my-4 '>
+                    <div className='border-t-2 border-l rounded-3xl '>
+                        <img className='backdrop-blur-sm w-full h-2/4 image rounded-3xl' src="https://assets.nflxext.com/ffe/siteui/vlv3/61b94313-a53b-4a73-b973-7632aafc9d8f/web_tall_panel/NG-en-20241104-TRIFECTA-perspective_92939d2b-8888-4ee5-9f91-baae83156198_large.jpg" alt="" />
+                    </div>
+                    <div className="w-full absolute bottom-0 rounded-3xl left-0 overlay bg-gradient-to-b from-transparent to-current md:px-52  "
                     >
-                    <div className=" md:mx-auto px-0 text-center  md:px-8">
-                        <div className="md:my-2 md:py-2  px-8  mx-4">
-                            <h3 className="text-slate-50 font-bold md:text-6xl text-3xl md:my-2 py-2 "> Unlimited movies, TV
-                                shows, and more</h3>
-                        </div>
-                        <div className="md:my-2 py-px">
-                            <p className="text-slate-50 font-normal  md:text-lg text-sm">Starts with #2,200. Cancel Anytime</p>
-                        </div>
-                        <div className="my-4 py-4 md:mx-8 mx-4">
-                            <p className="text-slate-50 my-2 md:font-bold font-thin md:text-sm">Ready to watch? Enter your email
-                                to create or restart your membership.</p>
-                            <form className="px-2 flex md:flex-row flex-col justify-center items-center  ">
-
-                                <div>
-                                    <input type="email"
-                                        className="relative md:w-96 w-80 py-4 rounded border  opacity-25 bg-white/30"/>
-                                </div>
-                                <div>
-                                    <button
-                                        className="text-slate-50  px-8 py-4 mx-2 my-2 rounded-lg bg-[#ff0000] flex items-stretch"><span>Get
-                                            Started</span> <span className="material-symbols-outlined self-center">
-                                            chevron_right
-                                        </span></button>
-                                </div>
-                            </form>
+                        <div className=" md:mx-auto px-0 text-center mt-24  md:px-8">
+                            <div className="md:my-2 md:py-2  ">
+                                <h3 className="text-slate-50 font-bold md:text-6xl text-3xl md:my-2 py-2 "> Unlimited movies, TV
+                                    shows, and more</h3>
+                            </div>
+                            <div className="md:my-2 py-px">
+                                <p className="text-slate-50 font-normal  md:text-lg text-sm">Starts with #2,200. Cancel Anytime</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div className="my-4 py-4 md:mx-8 mx-auto">
+                    <form className="px-2 flex md:flex-row flex-col justify-center items-center  ">
+                        <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                            <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">Email</span>
+                            <input type="text"   className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm/6" placeholder="Email"/>
+                        </div>
+                        <div>
+                            <button
+                                className="text-slate-50  px-8 py-4 mx-2 my-2 rounded-lg bg-[#ff0000] flex items-stretch"><span>Get
+                                    Started</span> <span className="material-symbols-outlined self-center">
+                                    chevron_right
+                                </span></button>
+                        </div>
+                    </form>
                 </div>
 
             </div>

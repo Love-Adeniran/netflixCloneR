@@ -20,16 +20,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.image{
-    /* height: 20%; */
-    border-radius: 50px;
-    background: #e0e0e0;
-    box-shadow: inset 20px 20px 60px #bebebe,
-            inset -20px -20px 80px #ffffff;
-}
-.banner{
-    max-height: 70%;
-}
-.overlay{
-    height: 73%;
-}
