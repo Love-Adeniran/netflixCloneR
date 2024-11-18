@@ -1,15 +1,20 @@
 
 .image {
-  height: 450px;
+  height: 480px;
   width: 100%; /* Or any value */
   object-fit: cover; /* Fill the container */
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: inset 50px 50px 100px #bebebe,
+          inset -50px -50px 100px #ffffff;
 }
 .banner{
     max-height: 1000px;
     z-index: 2;
     /* background-color: red; */
 }
-.overlay{
-    /* background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.90) 29.25%, rgba(0, 0, 0, 0.40) 64.5%); */
-    /* height: 73%; */
+.apiImages{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
