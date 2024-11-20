@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import Divwithsvgs from './Divwithsvgs';
 import Faq from './Faq';
 import Footer from './Footer';
 
 const LandingPage = () => {
     const [Movies, setMovies] = useState([]);
-    const [getMovies, setgetMovies] = useState([])
+    // const [getMovies, setgetMovies] = useState([])
 
     const apiLink = "https://api.themoviedb.org/3/movie/popular"
     const apiKey = "008b984b2b30cb1875d5d38b64308b89"
@@ -14,6 +14,7 @@ const LandingPage = () => {
         fetch(`${apiLink}?api_key=${apiKey}`)
             .then(res => res.json())
             .then(json => {
+                // console.log(json)
                 setMovies(json.results)
                 console.log(Movies);
             })
@@ -27,10 +28,10 @@ const LandingPage = () => {
     return (
         <div className='bg-[url("https://assets.nflxext.com/ffe/siteui/vlv3/3a4246b3-1dc8-49a8-be69-9e6ff5e7d763/web_tall_panel/NG-en-20241111-TRIFECTA-perspective_91abcd22-e80c-4a03-8d8c-1f9e3a5378fb_large.jpg")] bg-no-repeat'>
             <div className='filter backdrop-blur-3xl'>
-                <div className=' container md:container md:mx-auto  sm:mx-auto py-4'>
-                    <header className='py-2'>
-                        <div className='flex justify-between px-px'>
-                            <div >
+                <div className=' container md:container mx-auto  sm:mx-auto py-4'>
+                    <header className='py-2 px-4 md:px-px'>
+                        <div className='flex justify-between px-px mx-auto'>
+                            <div>
                                 <svg fill="#ff0000" viewBox="0 0 111 30" version="1.1"
                                     xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
                                     ariaHidden="true" role="img" className="default-ltr-cache-1d568uk ev1dnif2 text-red-900 md:w-36 w-20 ">
@@ -46,19 +47,19 @@ const LandingPage = () => {
                             </div>
                         </div>
                     </header>
-                    <div className='sm:container md:mx-0 mx-auto banner h-50 relative my-4 '>
+                    <div className='sm:container md:mx-0 mx-4  md:h-50 relative my-4 '>
                         <div className=' '>
-                            <img className='backdrop-blur-sm md:w-full border-t border-l md:max-h-2/4 image rounded-3xl' src="https://assets.nflxext.com/ffe/siteui/vlv3/61b94313-a53b-4a73-b973-7632aafc9d8f/web_tall_panel/NG-en-20241104-TRIFECTA-perspective_92939d2b-8888-4ee5-9f91-baae83156198_large.jpg" alt="" />
-                        </div>
-                        <div className="w-full absolute top-32 rounded-3xl left-0 overlay bg-gradient-to-b from-transparent to-current md:px-52 md:h-100 h-96 py-8 shadow-lg shadow-transparent"
-                        >
-                            <div className=" md:mx-auto px-0 text-center mt-24  md:px-8">
-                                <div className="md:my-2 md:py-2  ">
-                                    <h3 className="text-slate-50 font-extrabold md:text-6xl text-3xl md:my-2 py-2 "> Unlimited movies, TV
-                                        shows, and more</h3>
-                                </div>
-                                <div className="md:my-2 py-px">
-                                    <p className="text-[#BBB9B8] font-normal  md:text-xl text-sm">Starts with #2,200. Cancel anytime</p>
+                            <img className='backdrop-blur-sm md:w-full  md:border-t border-t-2 md:border-l border-l-2  h-50 image bg-cover rounded-3xl ' src="https://assets.nflxext.com/ffe/siteui/vlv3/61b94313-a53b-4a73-b973-7632aafc9d8f/web_tall_panel/NG-en-20241104-TRIFECTA-perspective_92939d2b-8888-4ee5-9f91-baae83156198_large.jpg" alt="" />
+                            <div className="w-full banner md:top-32 rounded-3xl left-0 bg-gradient-to-t  from-zinc-800 from-10 md:px-52 md:h-100 h-96 md:py-0   shadow-lg shadow-transparent"
+                            >
+                                <div className=" md:mx-auto px-0 text-center   md:px-8 md-py-0  py-4">
+                                    <div className="md:my-2 md:py-2  md:px-0 px-px">
+                                        <h3 className="text-slate-50 md:font-extrabold font-bold md:text-6xl text-2xl md:my-2 py-2 "> Unlimited movies, TV
+                                            shows, and more</h3>
+                                    </div>
+                                    <div className="md:my-2 py-px">
+                                        <p className="text-[#BBB9B8] font-normal  md:text-xl text-sm">Starts with #2,200. Cancel anytime</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -79,10 +80,9 @@ const LandingPage = () => {
                             </div>
                         </form>
                     </div>
-
                 </div>
-                <div className="  py-2">
-                    <div className="container mx-auto  my-2 md:px-20 flex justify-between">
+                <div className="py-2">
+                    <div className="container mx-auto my-2 md:px-20 flex justify-between">
                         <div className="px-4 py-px mx-4 ">
                             <h3 className="text-white text-2xl font-bold">Trending Now</h3>
                         </div>
@@ -97,7 +97,7 @@ const LandingPage = () => {
                                     <option value="Global" className=" px-2">Global</option>
                                 </select>
                             </div>
-                            <div className=" px-2  mx-2 my-px w-full">
+                            <div className="px-2  mx-2 my-px w-full">
                                 <select name="jurisdiction" id="range"
                                     className="py-2  bg-transparent md:rounded-3xl rounded-3xl text-white  w-full px-6 md:px-8 border">
                                     <option value="Movies" className=" px-2">Movies</option>
@@ -106,15 +106,15 @@ const LandingPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div class="container ">
+                    <div class="container mx-auto">
                         <div class=" flex flex-row overflow-x-scroll mx-4" id="movieName">
                             {
                                 Movies.filter((each, i) => i <= 10).map((each, i) => {
                                     return (
                                         <div key={i} onClick={() => fetchMovies(each.i)} className='w-0 mx-2 my-2 rounded-lg box scroll-ml-6 snap-start'>
                                             {console.log(each.backdrop_path)
-                                             }
-                                            <img src={`${image_base_url}.${each.backdrop_path}`} className='apiImages' alt="load" />
+                                            }
+                                            <img src={`${image_base_url}+${each.backdrop_path}`} className='apiImages' alt="load" />
                                         </div>
 
 
