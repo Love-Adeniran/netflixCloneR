@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Divwithsvgs from './Divwithsvgs';
 import Faq from './Faq';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
     const [Movies, setMovies] = useState([]);
@@ -26,7 +27,7 @@ const LandingPage = () => {
         fetchMovies()
     }, [])
     return (
-        <div className='bg-[url("https://assets.nflxext.com/ffe/siteui/vlv3/3a4246b3-1dc8-49a8-be69-9e6ff5e7d763/web_tall_panel/NG-en-20241111-TRIFECTA-perspective_91abcd22-e80c-4a03-8d8c-1f9e3a5378fb_large.jpg")] bg-no-repeat'>
+        <div className='bg-[url("https://assets.nflxext.com/ffe/siteui/vlv3/3a4246b3-1dc8-49a8-be69-9e6ff5e7d763/web_tall_panel/NG-en-20241111-TRIFECTA-perspective_91abcd22-e80c-4a03-8d8c-1f9e3a5378fb_large.jpg")] bg-no-repeat max-h-full bg-current'>
             <div className='filter backdrop-blur-3xl'>
                 <div className=' container md:container mx-auto  sm:mx-auto py-4'>
                     <header className='py-2 px-4 md:px-px'>
@@ -43,7 +44,9 @@ const LandingPage = () => {
                                 </svg>
                             </div>
                             <div className=' items-stretch'>
-                                <button className="bg-[#fff] rounded-2xl outline-double outline-offset-2 outline-2 outline-white px-3 py-px font-bold items-center"><span className=''>Sign in</span></button>
+                                <Link to="/signin" className='bg-[#fff] rounded-2xl outline-double outline-offset-2 outline-2 outline-white px-3 py-px font-bold items-center'>
+                                    <span className=''>Sign in</span>
+                                </Link>
                             </div>
                         </div>
                     </header>
@@ -82,22 +85,26 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div className="py-2">
-                    <div className="container mx-auto my-2 md:px-20 flex justify-between">
+                    <div className="container mx-auto my-2 md:px-20 flex flex-col md:flex-row justify-between">
                         <div className="px-4 py-px mx-4 ">
                             <h3 className="text-white text-2xl font-bold">Trending Now</h3>
                         </div>
-                        <div className="flex flex-col md:flex-row px-4 py-px mx-2">
-                            <div className="px-2 mx-2 my-px w-full">
+                        <div className="flex md:flex-row flex-col px-4 py-px mx-2">
+                            <div className="px-2 mx-2 my-px md:w-full relative">
+                                <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                                    {/* <span class="text-gray-500 sm:text-sm">$</span> */}
+                                    {/* <span class="material-symbols-outlined text-white">
+                                        globe
+                                    </span> */}
+                                </div>
                                 <select name="jurisdiction" id="range"
                                     className="py-2  bg-transparent md:rounded-3xl rounded-3xl text-white w-full px-8 md:px-8 border ">
-                                    <span class="material-symbols-outlined">
-                                        globe
-                                    </span>
+
                                     <option value="Nigeria" className="md:px-8 px-2">Nigeria</option>
                                     <option value="Global" className=" px-2">Global</option>
                                 </select>
                             </div>
-                            <div className="px-2  mx-2 my-px w-full">
+                            <div className="px-2  mx-2 my-px md:w-full">
                                 <select name="jurisdiction" id="range"
                                     className="py-2  bg-transparent md:rounded-3xl rounded-3xl text-white  w-full px-6 md:px-8 border">
                                     <option value="Movies" className=" px-2">Movies</option>
@@ -107,19 +114,14 @@ const LandingPage = () => {
                         </div>
                     </div>
                     <div class="container mx-auto">
-                        <div class=" flex flex-row overflow-x-scroll mx-4" id="movieName">
+                        <div class="flex flex-row overflow-x-scroll mx-4" id="movieName">
                             {
-                                Movies.filter((each, i) => i <= 10).map((each, i) => {
-                                    return (
-                                        <div key={i} onClick={() => fetchMovies(each.i)} className='w-0 mx-2 my-2 rounded-lg box scroll-ml-6 snap-start'>
-                                            {console.log(each.backdrop_path)
-                                            }
-                                            <img src={`${image_base_url}+${each.backdrop_path}`} className='apiImages' alt="load" />
-                                        </div>
-
-
-                                    )
-                                })
+                                Movies.filter((each, i) => i <= 10).map((each, i) =>
+                                (
+                                    <div key={i} onClick={() => fetchMovies(each.i)} className='mx-2 my-2 rounded-lg box scroll-ml-6 snap-start'>
+                                        <img src={`${image_base_url}${each.backdrop_path}`} className='apiImages' alt="load" width={500} />
+                                    </div>
+                                ))
                             }
                         </div>
                     </div>
