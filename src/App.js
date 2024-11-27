@@ -1,7 +1,8 @@
 import React from 'react'
 import LandingPage from './components/LandingPage.js'
 import './assets/landingPage.css'
-import SignIn from './components/SignIn.js'
+import SignIn from './components/signin/SignIn.js'
+import './components/signin/signin.css'
 import { Route, Router, Routes } from 'react-router-dom'
 
 function App() {

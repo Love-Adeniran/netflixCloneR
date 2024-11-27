@@ -1,10 +1,9 @@
 import React from 'react'
-
 const SignIn = () => {
     return (
         <>
-            <div className=' h-full bg-current'>
-                <div className='bg-[url("https://assets.nflxext.com/ffe/siteui/vlv3/03ad76d1-e184-4d99-ae7d-708672fa1ac2/web/NG-en-20241111-TRIFECTA-perspective_10f47f45-1de0-458e-b907-8b46eac27688_small.jpg")] md:bg-cover md:bg-blend-overlay max-w-screen overflow-hidden mb-4 relative '>
+            <div className=' h-screen bg-current'>
+                <div className='bg-[url("https://assets.nflxext.com/ffe/siteui/vlv3/03ad76d1-e184-4d99-ae7d-708672fa1ac2/web/NG-en-20241111-TRIFECTA-perspective_10f47f45-1de0-458e-b907-8b46eac27688_small.jpg")] overlay md:bg-cover md:bg-blend-overlay max-w-screen overflow-hidden mb-4 relative '>
                 <header className='py-2 px-4 md:px-2 top-0 left-0 w-screen absolute'>
                         <div className='flex justify-between px-px mx-auto '>
                         <div>
@@ -20,11 +19,11 @@ const SignIn = () => {
                         </div>
                     </div>
                 </header>
-                   <div className='md:container md:mx-auto md:px-12 md:pt-4 justify-center'>
+                   <div className='md:container md:mx-auto md:px-12 md:pt-4 justify-center '>
                         <div className='md:mx-20 md:px-12 md:pt-4 md:mt-4'>
                             <div className='md:w-90  md:mt-4 md:pt-4 md:px-12 md:mx-20'>
                                 <div className=' md:mx-12 md:px-8 md:pt-4 '>
-                                    <div className=' px-4 py-4 md:mx-8  bg-current transparent'>
+                                    <div className=' px-4 py-4 md:mx-8 overlaySignUp transparent'>
                                         <div className='my-8  md:mx-8 px-2'>
                                             <h2 className=' text-white font-bold text-3xl px-2 py-2 '>Sign In</h2>
                                         </div>
@@ -42,7 +41,7 @@ const SignIn = () => {
                                                 <p className=' text-slate-400'><span className=''>OR</span></p>
                                             </div>
                                             <div>
-                                                <button>Use a Sign in code</button>
+                                                <button className='text-slate-400'>Use a Sign in code</button>
                                             </div>
                                             <div className='text-center'>
                                                 <p className='text-white'>Forgot Password?</p>
@@ -57,11 +56,10 @@ const SignIn = () => {
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                    </div>
                 </div>
-                <footer className='my-15 py-12 '>
+                <footer className=' py-12  bg-current absolute left-0 top-100 w-full'>
                     <div className='container mx-auto  my-12 pt-10 px-4'>
                         <div>
                             <a href="" className='text-slate-300 text-sm'>Questions? Contact us.</a>

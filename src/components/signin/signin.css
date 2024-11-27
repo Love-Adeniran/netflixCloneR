@@ -1,0 +1,15 @@
+.overlay {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    /* z-index: 1; */
+}
+
+.overlaySignUp{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.footer{
+    bottom: 100;
+}

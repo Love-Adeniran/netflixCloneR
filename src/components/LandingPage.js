@@ -114,15 +114,17 @@ const LandingPage = () => {
                         </div>
                     </div>
                     <div class="container mx-auto">
-                        <div class="flex flex-row overflow-x-scroll mx-4" id="movieName">
-                            {
-                                Movies.filter((each, i) => i <= 10).map((each, i) =>
-                                (
-                                    <div key={i} onClick={() => fetchMovies(each.i)} className='mx-2 my-2 rounded-lg box scroll-ml-6 snap-start'>
-                                        <img src={`${image_base_url}${each.backdrop_path}`} className='apiImages' alt="load" width={500} />
-                                    </div>
-                                ))
-                            }
+                        <div className='mx-8'>
+                            <div class="flex flex-row overflow-x-scroll mx-8" id="movieName">
+                                {
+                                    Movies.filter((each, i) => i <= 10).map((each, i) =>
+                                    (
+                                        <div key={i} onClick={() => fetchMovies(each.i)} className='mx-2 my-2 rounded-lg box scroll-ml-6 snap-start '>
+                                            <img src={`${image_base_url}${each.backdrop_path}`} className='md:w-[200px] md:h-100 rounded-lg ' alt="load" />
+                                        </div>
+                                    ))
+                                }
+                            </div>
                         </div>
                     </div>
                     <div class="another-section mx-auto container my-4 md:px-20">
