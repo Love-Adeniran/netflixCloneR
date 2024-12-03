@@ -50,7 +50,7 @@ const SignIn = () => {
                                                 <input className='text-white' type="checkbox" name="Remember me" id="" /> <span className='text-white'>Remember me</span>
                                             </div>
                                             <div>
-                                                <p className='text-slate-400'>New to netflix? <a className='text-white'  href="#">Sign Up now</a></p>
+                                                <p className='text-slate-400'>New to netflix? <a className='text-white'  href="/">Sign Up now</a></p>
                                             </div>
                                         </div>
                                     </div>
