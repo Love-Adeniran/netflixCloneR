@@ -27,8 +27,8 @@ const LandingPage = () => {
         fetchMovies()
     }, [])
     return (
-        <div className='bg-[url("https://assets.nflxext.com/ffe/siteui/vlv3/3a4246b3-1dc8-49a8-be69-9e6ff5e7d763/web_tall_panel/NG-en-20241111-TRIFECTA-perspective_91abcd22-e80c-4a03-8d8c-1f9e3a5378fb_large.jpg")] bg-no-repeat max-h-full bg-current'>
-            <div className='filter backdrop-blur-3xl px-8'>
+        <div className='bg-[url("https://assets.nflxext.com/ffe/siteui/vlv3/3a4246b3-1dc8-49a8-be69-9e6ff5e7d763/web_tall_panel/NG-en-20241111-TRIFECTA-perspective_91abcd22-e80c-4a03-8d8c-1f9e3a5378fb_large.jpg")] bg-no-repeat max-h-full bg-current object-cover'>
+            <div className='filter backdrop-blur-3xl px-10'>
                 <div className='  mx-auto  sm:mx-auto py-4'>
                     <header className='py-2 px-4 md:px-px'>
                         <div className='flex justify-between px-px mx-auto'>
@@ -50,10 +50,10 @@ const LandingPage = () => {
                             </div>
                         </div>
                     </header>
-                    <div className='w-100 md:mx-0 mx-4  md:h-50 relative my-4 '>
+                    <div className='w-100 md:mx-0 mx-4  md:h-50 relative my-4 inset-0'>
                         <div className=' '>
-                            <img className='backdrop-blur-sm md:w-full  md:border-t border-t-2 md:border-l border-l-2  h-50 image bg-cover rounded-3xl ' src="https://assets.nflxext.com/ffe/siteui/vlv3/61b94313-a53b-4a73-b973-7632aafc9d8f/web_tall_panel/NG-en-20241104-TRIFECTA-perspective_92939d2b-8888-4ee5-9f91-baae83156198_large.jpg" alt="" />
-                            <div className="w-full banner md:top-32 rounded-3xl left-0 bg-gradient-to-t  from-zinc-800 from-10 md:px-52 md:h-100 h-96 md:py-0   shadow-lg shadow-transparent"
+                            <img className='backdrop-blur-sm md:w-full  md:border-t border-t-2 md:border-l border-l-2 object-cover h-50 image bg-cover rounded-3xl ' src="https://assets.nflxext.com/ffe/siteui/vlv3/61b94313-a53b-4a73-b973-7632aafc9d8f/web_tall_panel/NG-en-20241104-TRIFECTA-perspective_92939d2b-8888-4ee5-9f91-baae83156198_large.jpg" alt="" />
+                            <div className="w-full banner md:top-34 rounded-3xl left-0 bg-gradient-to-b from-transparent to-gray-900 from-10 md:px-52 md:h-100 h-96 md:py-0   shadow-lg shadow-transparent"
                             >
                                 <div className=" md:mx-auto px-0 text-center   md:px-8 md-py-0  py-4">
                                     <div className="md:my-2 md:py-2  md:px-0 px-px">
@@ -61,7 +61,7 @@ const LandingPage = () => {
                                             shows, and more</h3>
                                     </div>
                                     <div className="md:my-2 py-px">
-                                        <p className="text-[#BBB9B8] font-normal  md:text-xl text-sm">Starts with #2,200. Cancel anytime</p>
+                                        <p className="text-slate-50 font-bold  md:text-xl">Starts with #2,200. Cancel anytime</p>
                                     </div>
                                 </div>
                             </div>
@@ -70,15 +70,15 @@ const LandingPage = () => {
                     <div className="md:my-4 my-8 py-4 md:mx-8 mx-auto">
                         <form className="px-2 flex md:flex-row flex-col justify-center items-center  ">
                             <div className="flex rounded-3xl shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-[#2BB770] relative w-96">
-                                <span className="absolute focus-within:left-0 focus-within:top-0 select-none items-center pl-3 text-gray-500 sm:text-sm mb-5">Email Address</span>
+                                <span className="absolute focus-within:left-0 focus-within:top-0 items-center pl-5 pt-4 text-gray-500 sm:text-sm ">Email Address</span>
                                 <input type="text" name="username" id="username" className="placeholder:italic placeholder:text-slate-400 block bg-[#1D191B]  w-full border border-slate-300 rounded-3xl py-4 pl-9 pr-3 shadow-sm focus:outline-none focus:border-[#2BB770]  focus:placeholder-none focus:ring-[#2BB770] text-white  sm:text-sm focus-within:bg-[#1D191B]" />
 
                             </div>
                             <div className=''>
                                 <button
-                                    className="text-slate-50  px-8 py-4 mx-2 my-2 rounded-3xl bg-[#ff0000] flex items-stretch font-bold text-2xl">
+                                    className="text-slate-50  px-4 py-3 mx-2 my-2 rounded-3xl bg-[#ff0000] flex items-stretch font-bold text-xl">
                                     <span>Get
-                                        Started</span>
+                                        Started</span><span className="material-symbols-outlined self-center">chevron_right</span>
                                 </button>
                             </div>
                         </form>
@@ -114,8 +114,8 @@ const LandingPage = () => {
                         </div>
                     </div>
                     <div class="container mx-auto">
-                        <div className='mx-8 w-100 '>
-                            <div class="flex flex-row overflow-x-scroll md:mx-8" id="movieName">
+                        <div className='mx-12 w-100 '>
+                            <div class="flex flex-row overflow-x-scroll mx-8 md:mx-8" id="movieName">
                                 {
                                     Movies.filter((each, i) => i <= 10).map((each, i) =>
                                     (

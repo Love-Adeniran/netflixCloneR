@@ -4,13 +4,13 @@ const Faq = () => {
     return (
         <>
             <div className="px-4 py-2 md:mx-8">
-                <h3 className="text-white text-2xl">Frequently Asked Questions</h3>
+                <h3 className="text-white text-3xl font-semibold">Frequently Asked Questions</h3>
             </div>
             <div className="container  mx-auto px-4 py-2 ">
 
                 <div className="accordion my-2 ">
-                    <details className=" md:mx-8 cursor-pointer " >
-                        <summary className="flex justify-between  px-4 py-5 bg-[#2d2d2d] rounded-3xl">
+                    <details className=" md:mx-6 cursor-pointer " >
+                        <summary className="flex justify-between border border-[#737373] px-4 py-5 bg-[#272727] hover:bg-[3F3F3F] rounded-2xl">
                             <div>
                                 <p className="text-white text-lg font-bold">What is Netflix?</p>
                             </div>
@@ -24,7 +24,7 @@ const Faq = () => {
                             </div>
                         </summary>
 
-                        <div className="text-white mt-px bg-[#2d2d2d] px-4 py-4">
+                        <div className="text-white mt-px rounded-md bg-[#272727] px-4 py-4">
                             <p className="text-lg font-bold my-2">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime,
                                 documentaries, and
                                 more on thousands of internet-connected devices.</p>
@@ -33,8 +33,8 @@ const Faq = () => {
                     </details>
                 </div>
                 <div className="accordion my-2 cursor-pointer">
-                    <details className="  md:mx-8">
-                        <summary className="flex justify-between px-4 py-5 bg-[#2d2d2d] rounded-3xl">
+                    <details className="border-[#737373]  md:mx-6">
+                        <summary className="flex justify-between border border-[#737373] px-4 py-5 bg-[#272727] rounded-3xl">
                             <div>
                                 <p className="text-white text-lg font-bold">How much does Netflix cost?</p>
                             </div>
@@ -44,7 +44,7 @@ const Faq = () => {
                                 </div>
                             </div>
                         </summary>
-                        <div className="text-white mt-px px-4 bg-[#2d2d2d] py-4">
+                        <div className="text-white mt-px px-4 rounded-md bg-[#272727] py-4">
                             <p className="text-lg font-bold my-2">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans
                                 range from ₦2,200 to ₦7,000 a month. No extra costs, no contracts.</p>
                         </div>
@@ -52,8 +52,8 @@ const Faq = () => {
                     </details>
                 </div>
                 <div className="accordion my-2 cursor-pointer">
-                    <details className="  md:mx-8  ">
-                        <summary className="flex justify-between px-4 py-5 bg-[#2d2d2d] rounded-3xl">
+                    <details className="  md:mx-6  ">
+                        <summary className="flex justify-between border border-[#737373] px-4 py-5 bg-[#272727] rounded-3xl">
                             <div>
                                 <p className="text-white text-lg font-bold">Where can i watch?</p>
                             </div>
@@ -63,7 +63,7 @@ const Faq = () => {
                                 </div>
                             </div>
                         </summary>
-                        <div className="text-white mt-px bg-[#2d2d2d] px-4 py-4">
+                        <div className="text-white mt-px rounded-md bg-[#272727] px-4 py-4">
                             <p className="text-lg font-bold my-2">Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your
                                 personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones,
                                 tablets, streaming media players and game consoles.</p>
@@ -74,8 +74,8 @@ const Faq = () => {
                     </details>
                 </div>
                 <div className="accordion my-2 cursor-pointer">
-                    <details className="md:mx-8">
-                        <summary className="flex justify-between px-4 py-5 bg-[#2d2d2d] rounded-3xl">
+                    <details className="md:mx-6">
+                        <summary className="flex justify-between border border-[#737373] px-4 py-5 bg-[#272727] rounded-3xl">
                             <div>
                                 <p className="text-white text-lg font-bold">How do i cancel?</p>
                             </div>
@@ -85,7 +85,7 @@ const Faq = () => {
                                 </div>
                             </div>
                         </summary>
-                        <div className="text-white mt-px px-4 bg-[#2d2d2d] py-4">
+                        <div className="text-white mt-px px-4 rounded-md bg-[#272727] py-4">
                             <p className="text-lg font-bold py-2">Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two
                                 clicks. There are no cancellation fees – start or stop your account anytime.</p>
                         </div>
@@ -93,8 +93,8 @@ const Faq = () => {
                     </details>
                 </div>
                 <div className="accordion my-2 cursor-pointer">
-                    <details className=" md:mx-8">
-                        <summary className="flex justify-between px-4 py-5 bg-[#2d2d2d] rounded-3xl">
+                    <details className=" md:mx-6">
+                        <summary className="flex justify-between border border-[#737373] px-4 py-5 bg-[#272727] rounded-3xl">
                             <div>
                                 <p className="text-white text-lg font-bold">What can i watch on Netflix?</p>
                             </div>
@@ -104,7 +104,7 @@ const Faq = () => {
                                 </div>
                             </div>
                         </summary>
-                        <div className="text-white mt-px px-4 bg-[#2d2d2d] py-4">
+                        <div className="text-white mt-px px-4 rounded-md bg-[#272727] py-4">
                             <p className="text-lg font-bold py-2">Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and
                                 more. Watch as much as you want, anytime you want.</p>
                         </div>
@@ -112,8 +112,8 @@ const Faq = () => {
                     </details>
                 </div>
                 <div className="accordion my-2 cursor-pointer ">
-                    <details className="md:mx-8">
-                        <summary className="flex justify-between px-4 py-5 bg-[#2d2d2d] rounded-3xl">
+                    <details className="md:mx-6">
+                        <summary className="flex justify-between border border-[#737373] px-4 py-5 bg-[#272727] rounded-3xl">
                             <div>
                                 <p className="text-white text-lg font-bold">Is Netflix good for kids?</p>
                             </div>
@@ -123,7 +123,7 @@ const Faq = () => {
                                 </div>
                             </div>
                         </summary>
-                        <div className="text-white mt-px px-4 bg-[#2d2d2d] py-4">
+                        <div className="text-white mt-px px-4 rounded-md bg-[#272727] py-4 ">
                             <p className="text-lg font-bold my-2">The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV
                                 shows and movies in their own space.</p>
                             <p className="text-lg font-bold">Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can
