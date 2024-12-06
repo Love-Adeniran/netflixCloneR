@@ -28,8 +28,8 @@ const LandingPage = () => {
     }, [])
     return (
         <div className='bg-[url("https://assets.nflxext.com/ffe/siteui/vlv3/3a4246b3-1dc8-49a8-be69-9e6ff5e7d763/web_tall_panel/NG-en-20241111-TRIFECTA-perspective_91abcd22-e80c-4a03-8d8c-1f9e3a5378fb_large.jpg")] bg-no-repeat max-h-full bg-current'>
-            <div className='filter backdrop-blur-3xl'>
-                <div className=' container md:container mx-auto  sm:mx-auto py-4'>
+            <div className='filter backdrop-blur-3xl px-8'>
+                <div className='  mx-auto  sm:mx-auto py-4'>
                     <header className='py-2 px-4 md:px-px'>
                         <div className='flex justify-between px-px mx-auto'>
                             <div>
@@ -50,7 +50,7 @@ const LandingPage = () => {
                             </div>
                         </div>
                     </header>
-                    <div className='sm:container md:mx-0 mx-4  md:h-50 relative my-4 '>
+                    <div className='w-100 md:mx-0 mx-4  md:h-50 relative my-4 '>
                         <div className=' '>
                             <img className='backdrop-blur-sm md:w-full  md:border-t border-t-2 md:border-l border-l-2  h-50 image bg-cover rounded-3xl ' src="https://assets.nflxext.com/ffe/siteui/vlv3/61b94313-a53b-4a73-b973-7632aafc9d8f/web_tall_panel/NG-en-20241104-TRIFECTA-perspective_92939d2b-8888-4ee5-9f91-baae83156198_large.jpg" alt="" />
                             <div className="w-full banner md:top-32 rounded-3xl left-0 bg-gradient-to-t  from-zinc-800 from-10 md:px-52 md:h-100 h-96 md:py-0   shadow-lg shadow-transparent"
@@ -120,7 +120,7 @@ const LandingPage = () => {
                                     Movies.filter((each, i) => i <= 10).map((each, i) =>
                                     (
                                         <div key={i} onClick={() => fetchMovies(each.i)} className='mx-2 my-2 rounded-lg box scroll-ml-6 snap-start '>
-                                            <img src={`${image_base_url}${each.backdrop_path}`} className='md:w- md:h-100 rounded-lg imagesize' alt="load" />
+                                            <img src={`${image_base_url}${each.backdrop_path}`} className='object-cover md:w- md:h-100 rounded-lg imagesize' alt="load" />
                                         </div>
                                     ))
                                 }
