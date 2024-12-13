@@ -142,7 +142,7 @@ const Faq = () => {
                                 {/* <span className="material-symbols-outlined self-center">chevron_right</span> */}
                             </button>
                         </div>
-                        <div>
+                        <div className='my-2'>
                             <p className='text-white'>Create or restart your membership</p>
                         </div>
                     </div>

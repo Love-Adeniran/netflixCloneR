@@ -28,7 +28,7 @@ const LandingPage = () => {
     }, [])
     return (
         <div className='bg-[url("https://assets.nflxext.com/ffe/siteui/vlv3/3a4246b3-1dc8-49a8-be69-9e6ff5e7d763/web_tall_panel/NG-en-20241111-TRIFECTA-perspective_91abcd22-e80c-4a03-8d8c-1f9e3a5378fb_large.jpg")] bg-no-repeat max-h-full bg-current object-cover'>
-            <div className='filter backdrop-blur-3xl px-10'>
+            <div className='filter backdrop-blur-3xl bg-gradient-gray-900 px-10'>
                 <div className='  mx-auto  sm:mx-auto py-4'>
                     <header className='py-2 px-4 md:px-px'>
                         <div className='flex justify-between px-px mx-auto'>
@@ -44,7 +44,7 @@ const LandingPage = () => {
                                 </svg>
                             </div>
                             <div className=' items-stretch'>
-                                <Link to="/signin" className='bg-[#fff] rounded-2xl outline-double outline-offset-2 outline-2 outline-white px-3 py-px font-bold items-center'>
+                                <Link to="/signin" className='bg-[#fff] rounded-2xl  py-2 px-3 font-bold items-center'>
                                     <span className=''>Sign in</span>
                                 </Link>
                             </div>
@@ -87,9 +87,9 @@ const LandingPage = () => {
                 <div className="py-2">
                     <div className="container mx-auto my-2 md:px-20 flex flex-col md:flex-row justify-between">
                         <div className="px-4 py-px mx-4 ">
-                            <h3 className="text-white text-2xl font-bold">Trending Now</h3>
+                            <h3 className="text-white text-3xl font-semibold">Trending Now</h3>
                         </div>
-                        <div className="flex md:flex-row flex-col px-4 py-px mx-2">
+                        <div className="flex md:flex-row flex-col px-4 py-px mx-4">
                             <div className="px-2 mx-2 my-px md:w-full relative">
                                 <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                                     {/* <span class="text-gray-500 sm:text-sm">$</span> */}
@@ -114,8 +114,8 @@ const LandingPage = () => {
                         </div>
                     </div>
                     <div class="container mx-auto">
-                        <div className='mx-12 w-100 '>
-                            <div class="flex flex-row overflow-x-scroll mx-8 md:mx-8" id="movieName">
+                        <div className='mx-12 w-100 px-8'>
+                            <div class="flex flex-row overflow-x-scroll mx-14 md:mx-8" id="movieName">
                                 {
                                     Movies.filter((each, i) => i <= 10).map((each, i) =>
                                     (

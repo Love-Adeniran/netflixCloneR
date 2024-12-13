@@ -1,9 +1,19 @@
 import React from 'react'
-const SignIn = () => {
+import { useFormik } from 'formik'
+const SignUp = () => {
+    //get data from a variable, store data in a variable
+    let formik = useFormik({
+        initialValues:{
+            firstname:"",
+            lastname: "",
+            nmail : "",
+            password: ""
+        }
+    })
     return (
         <>
             <div className=' h-screen bg-current'>
-                <div className='bg-[url("https://assets.nflxext.com/ffe/siteui/vlv3/03ad76d1-e184-4d99-ae7d-708672fa1ac2/web/NG-en-20241111-TRIFECTA-perspective_10f47f45-1de0-458e-b907-8b46eac27688_small.jpg")] overlay md:bg-cover md:bg-blend-overlay max-w-screen overflow-hidden mb-4 relative '>
+                <div className='bg-[url("https://assets.nflxext.com/ffe/siteui/vlv3/03ad76d1-e184-4d99-ae7d-708672fa1ac2/web/NG-en-20241111-TRIFECTA-perspective_10f47f45-1de0-458e-b907-8b46eac27688_small.jpg")] overlay md:bg-cover md:bg-blend-overlay max-w-screen overflow-hidden  relative '>
                     <header className='py-2 px-4 md:px-2 top-0 left-0 w-screen absolute'>
                         <div className='flex justify-between px-px mx-auto '>
                             <div>
@@ -19,38 +29,35 @@ const SignIn = () => {
                             </div>
                         </div>
                     </header>
-                    <div className='md:container md:mx-auto md:px-12 md:pt-4 justify-center '>
+                    <div className='md:container w-100 md:mx-auto md:px-12 md:pt-4 justify-center '>
                         <div className='md:mx-20 md:px-12 md:pt-4 md:mt-4'>
                             <div className='md:w-90  md:mt-4 md:pt-4 md:px-12 md:mx-20'>
                                 <div className=' md:mx-12 md:px-8 md:pt-4 '>
                                     <div className=' px-4 py-4 md:mx-8 overlaySignUp transparent'>
                                         <div className='my-8  md:mx-8 px-2'>
-                                            <h2 className=' text-white font-bold text-3xl px-2 py-2 '>Sign In</h2>
+                                            <h2 className=' text-white font-bold text-3xl px-2 py-2 '>Sign Up</h2>
                                         </div>
                                         <div className='md:px-8'>
                                             <div className='w-100  px-2 py-2'>
-                                                <input className='border w-full rounded  px-2 py-3 bg-transparent' type="text" placeholder='Email or mobile number' />
+                                                <input name='firstname' className='border w-full rounded  px-2 py-3 bg-transparent' type="text" placeholder='First Name' />
                                             </div>
                                             <div className='w-100  px-2 py-2'>
-                                                <input className='border w-full rounded  px-2 py-3 bg-transparent' type="text" placeholder='Password' />
+                                                <input name='lastname' className='border w-full rounded  px-2 py-3 bg-transparent' type="text" placeholder='Last Name' />
+                                            </div>
+                                            <div className='w-100  px-2 py-2'>
+                                                <input name='email' className='border w-full rounded  px-2 py-3 bg-transparent' type="text" placeholder='Email or mobile number' />
+                                            </div>
+                                            <div className='w-100  px-2 py-2'>
+                                                <input name='password' className='border w-full rounded  px-2 py-3 bg-transparent' type="text" placeholder='Password' />
+                                            </div>
+                                            <div className='w-100  px-2 py-2'>
+                                                <input name='Cpassword' className='border w-full rounded  px-2 py-3 bg-transparent' type="text" placeholder='Confirm Password' />
                                             </div>
                                             <div className='w-100  px-2 py-2'>
                                                 <button className='hover:bg-[#C11119] bg-[#ff0000] rounded w-full py-3 text-white font-bold'>Sign in</button>
                                             </div>
-                                            <div className='justify-items-center'>
-                                                <p className=' text-slate-400'><span className=''>OR</span></p>
-                                            </div>
                                             <div>
-                                                <button className='text-slate-400'>Use a Sign in code</button>
-                                            </div>
-                                            <div className='text-center'>
-                                                <p className='text-white'>Forgot Password?</p>
-                                            </div>
-                                            <div>
-                                                <input className='text-white' type="checkbox" name="Remember me" id="" /> <span className='text-white'>Remember me</span>
-                                            </div>
-                                            <div>
-                                                <p className='text-slate-400'>New to netflix? <a className='text-white' href="/signup">Sign Up now</a></p>
+                                                <p className='text-slate-400'>Already have an account? <a className='text-white' href="/signin">Sign In now</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -88,4 +95,4 @@ const SignIn = () => {
     )
 }
 
-export default SignIn
+export default SignUp
